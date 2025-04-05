@@ -1,0 +1,68 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Satisfy&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 25% 98%;
+    --foreground: 20 15% 15%;
+
+    --card: 30 25% 98%;
+    --card-foreground: 20 15% 15%;
+
+    --popover: 30 25% 98%;
+    --popover-foreground: 20 15% 15%;
+
+    --primary: 20 54% 20%;
+    --primary-foreground: 30 25% 98%;
+
+    --secondary: 30 30% 92%;
+    --secondary-foreground: 20 54% 20%;
+
+    --muted: 30 20% 90%;
+    --muted-foreground: 20 15% 40%;
+
+    --accent: 10 80% 60%;
+    --accent-foreground: 30 25% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 30 25% 98%;
+
+    --border: 20 30% 85%;
+    --input: 20 30% 85%;
+    --ring: 20 54% 20%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-recipe-100 bg-paper-texture text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .recipe-card {
+    @apply bg-white border border-recipe-300 rounded-md shadow-md transition-all hover:shadow-lg;
+  }
+  
+  .recipe-title {
+    @apply font-serif text-recipe-800 text-xl font-semibold;
+  }
+  
+  .handwritten {
+    @apply font-handwritten text-recipe-700;
+  }
+}
